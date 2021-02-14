@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Wordpress интенсив</title>
 </head>
 
 <body>
     <section class="promo">
         <div class="container">
-            <div class="logo">
+            <div class="promo__logo">
                 <img src="icons/logo.png" class="logo__img" alt="logo">
                 <div class="logo__text">wordpress интенсив</div>
             </div>
-            <h1 class="title">Создать свой сайт на WordPress </h1>
-            <div class="simple">
-                <h2 class="title__big">это просто! </h2>
-            </div>
-            <h2 class="title">Куда сложнее сделать это правильно!</h2>
+            <h1 class="promo__title title">Создать свой сайт на WordPress </h1>
+
+            <h2 class="promo__title-big">это просто! </h2>
+
+            <h2 class="promo__subtitle title">Куда сложнее сделать это правильно!</h2>
 
             <div class="promo__text">
                 Ежедневно в России появляется более 5 000 новых сайтов.<br>
@@ -28,11 +31,9 @@
                 успеха? Узнайте на предстоящем двухдневном <span>БЕСПЛАТНОМ</span> интенсиве!
             </div>
             <button class="promo__btn btn">Записаться на интенсив!</button>
-            <div class="more">
+            <div class="promo__more">
                 <div class="more__text">узнать больше об интенсиве</div>
-
                 <img src="icons/arrow.png" class="more__img" alt="scroll to down">
-
             </div>
         </div>
     </section>
@@ -121,19 +122,55 @@
                     </div>
                     <div class="finish__descr">Получать ощутимую прибыль</div>
                 </div>
-                
+
             </div>
         </div>
     </section>
     <section class="gift">
         <div class="container">
-            <img src="icons/gift.png" alt="gift" class="gift__image">
+            <img src="icons/gift.png" alt="gift" class="gift__img">
             <p class="gift__descr">
-                Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте на кнопку ниже, принимайте участие в вебинарах и забирайте свой приз по окончании обучения!
+                Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте на кнопку ниже, принимайте
+                участие в вебинарах и забирайте свой приз по окончании обучения!
             </p>
             <button class="gift__btn btn">Записаться на интенсив!</button>
         </div>
     </section>
+    <section class="webinar">
+        <div class="container">
+            <img src="./icons/laptop.png" alt="" class="webinar__img">
+            <h3 class="webinar__title">Первый вебинар состоится:</h3>
+            <h3 class="webinar__date">10 сентября в 20:00 по Москве</h3>
+            <p class="webinar__text">Успейте записаться, количество мест ограничено!</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+                <a href="#" class="footer__support">Служба поддержки</a>
+                <a href="#" class="footer__policy">Политика конфиденциальности</a>
+            <div class="footer__tel">
+                Позвоните нам <a href="tel:8-800-555-01-21">8-800-555-01-21</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+
+        let completed = true;
+        let learnJS = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                if (completed) {
+                    resolve(console.log('done'));
+                } else {
+                    reject(console.log('nah'));
+                }
+            }, 8000)
+        })
+
+        ScrollReveal().reveal('.promo__logo', { delay: 400, reset: false });
+        ScrollReveal().reveal('.gift__img', { delay: 250, reset: false, scale: 1.35 });
+    </script>
 </body>
 
 </html>
