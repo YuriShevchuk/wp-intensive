@@ -156,18 +156,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-
-        let completed = true;
-        let learnJS = new Promise(function (resolve, reject) {
-            setTimeout(() => {
-                if (completed) {
-                    resolve(console.log('done'));
-                } else {
-                    reject(console.log('nah'));
-                }
-            }, 8000)
-        })
-
         ScrollReveal().reveal('.promo__logo', { delay: 400, reset: false });
         ScrollReveal().reveal('.gift__img', { delay: 250, reset: false, scale: 1.35 });
     </script>
